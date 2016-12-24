@@ -1,0 +1,2 @@
+# SEITUku
+Centralized Savings Management
