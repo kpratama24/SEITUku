@@ -1,9 +1,7 @@
 <?php
 session_start();
 if (!isset($_SESSION['id'])) {
-	header("Location: ./");
-} else if ($_SESSION['roleId'] != 2) {
-	header("Location: ./");
+  header("Location: ./");
 }
 
 include './header.php';
@@ -17,11 +15,11 @@ $sth->execute($params);
 $row = $sth->fetch(PDO::FETCH_ASSOC);
 
 $count = 1;
-$total = 0;
+$total= 0;
 $sqlDeposit = "SELECT deposit_date, amount_deposit FROM deposit WHERE student_id = :id";
-$paramsDeposit = array(':id' => $row['username']);
+$params = array(':id' => $_GET['studentID']);
 $sthDeposit = $dbh->prepare($sqlDeposit);
-$sthDeposit->execute($paramsDeposit);
+$sthDeposit->execute($params);
 
 $rowDeposit = $sthDeposit->fetchall(PDO::FETCH_ASSOC);
 ?>
@@ -30,10 +28,11 @@ table {
     border: 1px solid black;
 }
 </style>
-<div class="container">
+<div class="container" style="text-align:center">
   <header>
     <h2 class="alt" style="text-align:center">SEITUku</h2>
-    <p style="text-align:center">Welcome <?php echo $row['username']; ?> ! <a href="./logout.php">Logout</a></p>
+    <a href="./administrator.php"><button class="button">Go back to Administrator Main Page </button></a>
+    <p style="text-align:center">Deposit for <?php echo $_GET['studentID']; ?></p>
   </header>
   <table>
     <tr>

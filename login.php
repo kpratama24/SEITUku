@@ -21,6 +21,7 @@ if ($sth->rowCount()) {
   if ($row['password']==$password) {
     session_start();
     $_SESSION['id'] = $row['id'];
+    /*For depositor_search.php purpose **/$_SESSION['username'] = $row['username'];//
     $_SESSION['roleId'] = $row['role_id'];
 
     header("Location: ./index.php");
