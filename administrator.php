@@ -7,4 +7,6 @@ if (!isset($_SESSION['id'])) {
 }
 
 include './header.php';
+session_unset();
+session_destroy();
 ?>
