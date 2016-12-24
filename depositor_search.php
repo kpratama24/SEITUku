@@ -24,8 +24,9 @@ $sthDeposit->execute($params);
 $rowDeposit = $sthDeposit->fetchall(PDO::FETCH_ASSOC);
 ?>
 <style>
-table {
+table,th,td {
     border: 1px solid black;
+    padding: 5px;
 }
 </style>
 <div class="container" style="text-align:center">
@@ -57,3 +58,4 @@ table {
       <h2>Deposit Total : IDR <?php echo $total; ?></h2>
   </table>
 </div>
+<?php include "./footer.php" ?>

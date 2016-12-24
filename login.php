@@ -32,3 +32,5 @@ if ($sth->rowCount()) {
   header("Location: ./index.php");
 }
  ?>
+ <?php include "./footer.php" ?>
+ 

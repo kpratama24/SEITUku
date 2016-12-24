@@ -28,8 +28,9 @@ $row = $sth->fetch(PDO::FETCH_ASSOC);
     </form>
     <br>
     <h2>Actions</h2>
-    <a href="./add_depo_other.php"><button class="button">Add Deposit (Other Depositor)</button></a>
+    <a href="./add_depo_other.php"><button class="button">Add Deposit (Other Depositor)</button></a><br><br>
     <a href="./add_depo_own.php"><button class="button">Add Deposit (Own Deposit)</button></a>
 
   </div>
 </div>
+<?php include "./footer.php" ?>
