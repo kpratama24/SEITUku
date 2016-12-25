@@ -7,7 +7,7 @@ bottom:0px;
 left:0px;
 right:0px;
 margin-bottom:0px;">
-&copy; SEITU 2017. All rights reserved
+&copy; SEITU 2017. Property of : <a href="http://nearkevin.cu.cc">NearKevin </a>
 </div>
 </body>
 </html>
