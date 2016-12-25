@@ -1,0 +1,7 @@
+Known Problems :
+1. Edit,Delete not yet implemented (need database reconstruction)
+2. StudentID cannot be the same (will mess up with search query)
+3. No Sign up feature
+4. Web Interface needs an overhaul
+5. Database is not object oriented
+6. Amount input don't have a checker (Input must be valid !)
