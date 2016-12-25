@@ -21,9 +21,9 @@
    <footer>
      <div style="text-align:center">
         <form action="./login.php" method="post">
-        <input type="text" name="username" placeholder="Student ID">
+        <input type="text" name="username" placeholder="Student ID" style="text-align:center">
         <br>
-        <input type="password" name="password" placeholder="Password">
+        <input type="password" name="password" placeholder="Password" style="text-align:center">
         <br><br>
         <input type="submit" class="button" value="Login">
      </form>

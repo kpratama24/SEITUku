@@ -23,7 +23,7 @@ $row = $sth->fetch(PDO::FETCH_ASSOC);
   <div style="text-align:center">
     <h2>Search Depositor Data</h2>
     <form action="depositor_search.php" method="get">
-      <input type="text" name="studentID" placeholder="Student ID"><br>
+      <input type="text" name="studentID" placeholder="Student ID" style="text-align:center"><br>
       <input type="submit" value="Search">
     </form>
     <br>
