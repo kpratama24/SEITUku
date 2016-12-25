@@ -15,7 +15,7 @@
 
    <header>
      <h2 class="alt" style="text-align:center">SEITUku</h2>
-     <p style="text-align:center">Online Deposit System for SEITU 2017</p>
+     <p style="text-align:center">Online Deposit System</p>
    </header>
 
    <footer>
