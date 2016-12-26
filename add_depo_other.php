@@ -14,9 +14,9 @@ include "./header.php";
 
    <form action="./action_add_depo_other.php" method="post">
      <?php if (isset($_GET['depositrecordsuccess'])) echo "<h1> <mark>Deposit Recorded Successfully !</mark> </h1>" ?>
-    <input type="text" name="studentID" placeholder="Student ID" style="text-align:center">
+    <input type="text" name="studentID" placeholder="Student ID" style="text-align:center" required>
     Date of deposit : <input type="date" name="date"><br>
-    <input type="number" name="amount" placeholder="Amount of Deposit (Numbers Only !)" style="width:400px"><br>
+    <input type="number" name="amount" placeholder="Amount of Deposit (Numbers Only !)" style="width:400px" required><br>
     <input type="submit" value="Record Deposit">
     </form>
  </div>
