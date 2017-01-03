@@ -36,22 +36,23 @@ table,th,td {
     <h2 class="alt" style="text-align:center">SEITUku</h2>
     <p style="text-align:center">Welcome <?php echo $row['username']; ?> ! <a href="./logout.php">Logout</a></p>
   </header>
-  <table>
-    <tr>
-      <td>Number</td>
-      <td>Date</td>
-      <td>Amount</td>
-    </tr>
     <?php
+		if($rowDeposit>0){
       foreach ($rowDeposit as $rowdepo) {
      ?>
+		 <table>
+	     <tr>
+	       <td>Number</td>
+	       <td>Date</td>
+	       <td>Amount</td>
+	     </tr>
       <tr>
         <td><?php echo $count; ?></td>
         <td><?php echo $rowdepo['deposit_date']; ?></td>
         <td>IDR <?php echo $rowdepo['amount_deposit']; ?></td>
       </tr>
       <?php $count++; ?>
-      <?php }
+      <?php }}
       foreach ($rowDeposit as $rowdepo) {
         $total += $rowdepo['amount_deposit'];
       }

@@ -35,22 +35,23 @@ table,th,td {
     <a href="./administrator.php"><button class="button">Go back to Administrator Main Page </button></a>
     <p style="text-align:center">Deposit for <?php echo $_GET['studentID']; ?></p>
   </header>
-  <table>
-    <tr>
-      <td>Number</td>
-      <td>Date</td>
-      <td>Amount</td>
-    </tr>
     <?php
+    if($rowDeposit>0){
       foreach ($rowDeposit as $rowdepo) {
      ?>
+     <table>
+       <tr>
+         <td>Number</td>
+         <td>Date</td>
+         <td>Amount</td>
+       </tr>
       <tr>
         <td><?php echo $count; ?></td>
         <td><?php echo $rowdepo['deposit_date']; ?></td>
         <td>IDR <?php echo $rowdepo['amount_deposit']; ?></td>
       </tr>
       <?php $count++; ?>
-      <?php }
+      <?php }}
       foreach ($rowDeposit as $rowdepo) {
         $total += $rowdepo['amount_deposit'];
       }
