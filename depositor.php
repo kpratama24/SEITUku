@@ -58,5 +58,6 @@ table,th,td {
       }
       ?>
   </table>
+		<?php echo "Total : IDR". $total ?>
 </div>
 <?php include "./footer.php" ?>

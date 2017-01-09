@@ -24,6 +24,12 @@ $sthDeposit->execute($paramsDeposit);
 
 $rowDeposit = $sthDeposit->fetchall(PDO::FETCH_ASSOC);
 ?>
+<style>
+table,th,td {
+    border: 1px solid black;
+    padding: 5px;
+}
+</style>
 <div class="container">
   <header>
     <h2 class="alt" style="text-align:center">SEITUku <?php if ($_SESSION['id']==1) {?> <b>(Super Administrator)</b> <?php } else { ?><b>(Administrator)</b> <?php } ?> </h2>
@@ -34,12 +40,12 @@ $rowDeposit = $sthDeposit->fetchall(PDO::FETCH_ASSOC);
       foreach ($rowDeposit as $rowdepo) {
      ?>
 		 <table>
-       <tr>
+			 <tr>
          <td>Number</td>
          <td>Date</td>
          <td>Amount</td>
-       </tr>
-      <tr>
+      </tr>
+			<tr>
         <td><?php echo $count; ?></td>
         <td><?php echo $rowdepo['deposit_date']; ?></td>
         <td>IDR <?php echo $rowdepo['amount_deposit']; ?></td>
@@ -51,6 +57,7 @@ $rowDeposit = $sthDeposit->fetchall(PDO::FETCH_ASSOC);
       }
       ?>
   </table>
+	<?php echo "Total : IDR". $total ?>
 	<hr>
 	<h1>Administrator Section</h1>
   <div style="text-align:center">
