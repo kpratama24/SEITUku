@@ -57,7 +57,6 @@ table,th,td {
         $total += $rowdepo['amount_deposit'];
       }
       ?>
-      <h2>Deposit Total : IDR <?php echo $total; ?></h2>
   </table>
 </div>
 <?php include "./footer.php" ?>

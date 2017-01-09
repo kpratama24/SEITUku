@@ -26,7 +26,7 @@ $rowDeposit = $sthDeposit->fetchall(PDO::FETCH_ASSOC);
 ?>
 <div class="container">
   <header>
-    <h2 class="alt" style="text-align:center">SEITUku</h2>
+    <h2 class="alt" style="text-align:center">SEITUku <?php if ($_SESSION['id']==1) {?> <b>(Super Administrator)</b> <?php } else { ?><b>(Administrator)</b> <?php } ?> </h2>
     <p style="text-align:center">Welcome <?php echo $row['username']; ?> ! <a href="./logout.php">Logout</a></p>
   </header>
     <?php
@@ -50,7 +50,6 @@ $rowDeposit = $sthDeposit->fetchall(PDO::FETCH_ASSOC);
         $total += $rowdepo['amount_deposit'];
       }
       ?>
-      <h2>Deposit Total : IDR <?php echo $total; ?></h2>
   </table>
 	<hr>
 	<h1>Administrator Section</h1>
