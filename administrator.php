@@ -57,7 +57,7 @@ table,th,td {
       }
       ?>
   </table>
-	<?php echo "Total : IDR". $total ?>
+	<?php if($total>0) echo "Total : IDR". $total ?>
 	<hr>
 	<h1>Administrator Section</h1>
   <div style="text-align:center">
