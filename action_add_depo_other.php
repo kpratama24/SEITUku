@@ -5,11 +5,12 @@ if (!isset($_SESSION['id'])) {
 }
 
 $dbh = include './dbconn.php';
-$sql = "INSERT INTO `deposit` (`student_id`, `deposit_date`, `amount_deposit`) VALUES (:studentID, :date, :amount)";
+$sql = "INSERT INTO `deposit` (`student_id`, `deposit_date`, `amount_deposit`, `dummy`) VALUES (:studentID, :date, :amount, :dummy)";
 $params = array(
   ':studentID' => $_POST['studentID'],
   ':date' => $_POST['date'],
-  ':amount' => $_POST['amount']
+  ':amount' => $_POST['amount'],
+  ':dummy' => "NO"
 );
 $sth = $dbh->prepare($sql);
 $sth->execute($params);

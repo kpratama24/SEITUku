@@ -12,11 +12,12 @@ $sth->execute($params);
 
 $row = $sth->fetch(PDO::FETCH_ASSOC);
 
-$sql = "INSERT INTO `deposit` (`student_id`, `deposit_date`, `amount_deposit`) VALUES (:studentID, :date, :amount)";
+$sql = "INSERT INTO `deposit` (`student_id`, `deposit_date`, `amount_deposit`, `dummy`) VALUES (:studentID, :date, :amount, :dummy)";
 $params = array(
   ':studentID' => $row['username'],
   ':date' => $_POST['date'],
-  ':amount' => $_POST['amount']
+  ':amount' => $_POST['amount'],
+  ':dummy' => "NO"
 );
 $sth = $dbh->prepare($sql);
 $sth->execute($params);

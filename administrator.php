@@ -69,7 +69,8 @@ table,th,td {
     <br>
     <h2>Actions</h2>
     <a href="./add_depo_other.php"><button class="button">Add Deposit (Other Depositor)</button></a><br><br>
-    <a href="./add_depo_own.php"><button class="button">Add Deposit (Own Deposit)</button></a>
+    <a href="./add_depo_own.php"><button class="button">Add Deposit (Own Deposit)</button></a><br><br>
+		<?php if($_SESSION['id']==1) { ?> <a href="./view_all_data_super.php"><button class="button">View All Data</button></a><br><br> <?php } ?>
 
   </div>
 </div>
