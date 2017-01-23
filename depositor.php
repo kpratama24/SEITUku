@@ -36,14 +36,15 @@ table,th,td {
     <h2 class="alt" style="text-align:center">SEITUku</h2>
     <p style="text-align:center">Welcome <?php echo $row['username']; ?> ! <a href="./logout.php">Logout</a></p>
   </header>
-
+  <?php if($total!=0) {?>
      <table>
        <tr>
          <td>Number</td>
          <td>Date</td>
          <td>Amount</td>
        </tr>
-    <?php
+      </table>
+    <?php } ?>
 		if($rowDeposit>0){
       foreach ($rowDeposit as $rowdepo) {
      ?>

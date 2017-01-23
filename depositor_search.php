@@ -35,12 +35,14 @@ table,th,td {
     <a href="./administrator.php"><button class="button">Go back to Administrator Main Page </button></a>
     <p style="text-align:center">Deposit for <?php echo $_GET['studentID']; ?></p>
   </header>
+  <?php if(total!=0) { ?>
   <table>
        <tr>
          <td>Number</td>
          <td>Date</td>
          <td>Amount</td>
        </tr>
+       <?php } ?>
     <?php
     if($rowDeposit>0){
       foreach ($rowDeposit as $rowdepo) {
