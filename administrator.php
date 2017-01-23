@@ -35,16 +35,16 @@ table,th,td {
     <h2 class="alt" style="text-align:center">SEITUku <?php if ($_SESSION['id']==1) {?> <b>(Super Administrator)</b> <?php } else { ?><b>(Administrator)</b> <?php } ?> </h2>
     <p style="text-align:center">Welcome <?php echo $row['username']; ?> ! <a href="./logout.php">Logout</a></p>
   </header>
-    <?php
-		if($rowDeposit>0){
-      foreach ($rowDeposit as $rowdepo) {
-     ?>
-		 <table>
-			 <tr>
+     <table>
+       <tr>
          <td>Number</td>
          <td>Date</td>
          <td>Amount</td>
       </tr>
+    <?php
+		if($rowDeposit>0){
+      foreach ($rowDeposit as $rowdepo) {
+     ?>
 			<tr>
         <td><?php echo $count; ?></td>
         <td><?php echo $rowdepo['deposit_date']; ?></td>
