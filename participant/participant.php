@@ -50,7 +50,7 @@
 						<!-- Intro -->
 							<article id="payment">
 								<h2 class="major">Payment Status</h2>
-								<h3><?php if($row['payment_total']==650000){
+								<h3><?php if($row['payment_total']==600000){
 									echo "Full Payment";
 								}
 								else if($row['payment_total']>0){
