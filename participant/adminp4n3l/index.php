@@ -35,6 +35,7 @@
       </tr>
   <?php }} ?>
         </table>
+        <a href="./g2z3aao6OJ.php"><button>Update payment</button></a>
     </body>
 </html>
 <?php }
